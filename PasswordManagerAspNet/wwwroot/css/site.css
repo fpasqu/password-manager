@@ -1,0 +1,200 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: white;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+footer .container {
+    color: white;
+}
+
+/*custom css*/
+body {
+    display: flex;
+    flex-direction:column;
+
+    flex-grow: 1;
+    background: black;
+}
+main {
+    flex-grow: 1;
+}
+footer {
+    padding: 8px
+}
+
+#signin {
+    text-align: center !important;
+}
+
+#signout {
+    display: flex;
+    flex-direction: row;
+}
+
+#p-create {
+    margin: 0.5rem;
+}
+
+.bg-gradient-navbar {
+    background: black;
+    border-bottom: 1px solid white;
+}
+.a-custom, .li-custom {
+    border-radius: 2.5rem;
+    vertical-align: baseline;
+    color: white !important;
+    text-align: center;
+}
+.li-custom , #signin{
+    align-items: center;
+    margin: 0.5rem;
+}
+.a-custom {
+    width: 100% !important;
+    border: 2px solid white;
+    padding: 5px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.a-custom:hover, .generator button:hover {
+    background-color: white;
+    color: black !important;
+    border: 2px solid black;
+}
+.li-custom span {
+    margin-right: 10px;
+}
+.list-group-item {
+    background:black;
+    color: white;
+    border: 1px solid white;
+}
+.card {
+    border: 1px solid white;
+}
+.container {
+    flex-grow: 1;
+}
+.pwbox {
+    width: auto;
+    border: dashed 1px white;
+    border-radius: 3px;
+    color: white;
+    background-color: black;
+}
+.showpw, .generator input[type="checkbox"] {
+    appearance: none;
+    accent-color: black;
+    margin-left: 0.5rem;
+    margin-right: 0.2rem;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid white;
+    border-radius: 0.15em;
+}
+
+.showpw:checked, .generator input[type="checkbox"]:checked {
+    border: 0.15em solid white;
+    background-color: white;
+}
+.generator {
+    font-size: 15px;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    color: white;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    border: 0.1rem solid white;
+    border-radius: 0.5rem;
+}
+
+.generator input[type="checkbox"] {
+    margin: 0rem 0.5rem;
+}
+
+.generator h1 {
+    text-align: center;
+}
+
+#length {
+    background-color: black;
+    border-radius: 3px;
+    width: 20%;
+    color: white;
+    text-decoration: none;
+}
+
+#clipboard-icon {
+    width: 20px
+}
+
+.input-valid {
+    border: 1px dashed white;
+}
+.input-invalid {
+    border: 1px solid red;
+}
+.generator div label {
+    color: red;
+}
+.has-button, .has-outcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.generator button {
+    
+    padding: 4px 10px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 2rem;
+}
+#outcome {
+    width: 100%;
+    border: none;
+    border-bottom: 3px dashed white;
+    color: lawngreen;
+    background-color: black;
+    margin: 1rem;
+    outline: none;
+}
+#error-label {
+    color: red;
+    display: none;
+}
+#site-logo {
+    margin: 0 1rem;
+}
+
+#site-menu {
+    margin-bottom: 2rem;
+}

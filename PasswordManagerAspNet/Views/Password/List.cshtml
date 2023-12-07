@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PasswordManagerAspNet.Models.Entities.Password>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="~/css/customStyle.css">
+<script type="text/javascript" src="~/js/customJs.js" ></script>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<p id="p-create">
+    <a asp-action="Create" id="add-to-list-link" class="btn rounded-circle">
+        <i id="add-to-list-icon" class="fas fa-plus"></i>
+    </a>
+</p>
+
+@if (Model == null || Model.Count() <= 0)
+{
+    <h3>Your list is empty</h3>
+    <p class="body-text">To insert new entries, click the '+' button above.</p>
+}
+else
+{
+    @foreach (var item in Model)
+    {
+        <div class="card text-white bg-dark mb-3">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                        <span class="font-weight-bold">@(Html.DisplayNameFor(model => model.AccountName)): </span>
+                        @Html.DisplayFor(modelItem => item.AccountName)
+                </li>
+                <li class="list-group-item">
+                        <span class="font-weight-bold">@(Html.DisplayNameFor(model => model.AccountEmail)): </span>
+                        @Html.DisplayFor(modelItem => item.AccountEmail)
+                </li>
+                <li class="list-group-item">
+                        <span class="font-weight-bold">@(Html.DisplayNameFor(model => model.PasswordValue)): </span>
+                    <input class="show-hide-password pwbox" type="password" disabled value="@item.PasswordValue" id="@item.Id">
+                    <input class="showpw" type="checkbox" onclick="showHide('@(item.Id)')"><span>Show</span>
+                </li>
+                <li class="list-group-item">
+                        <span class="font-weight-bold">@(Html.DisplayNameFor(model => model.Notes)): </span>
+                        @Html.DisplayFor(modelItem => item.Notes)
+                </li>
+            </ul>
+            <div class="card-footer">
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Delete</a>
+            </div>
+        </div>
+    }
+}

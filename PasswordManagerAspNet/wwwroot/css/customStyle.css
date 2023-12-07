@@ -1,0 +1,35 @@
+#add-to-list-icon {
+    color: white !important;
+    transition: color 0.3s;
+}
+
+#add-to-list-link {
+    background-color: black;
+    border: 1px solid white !important;
+}
+
+#add-to-list-link:hover #add-to-list-icon {
+    color: black !important;
+}
+
+#add-to-list-link:hover {
+    color: black !important;
+    background-color: white;
+}
+
+.body-text {
+    font-size: 20px;
+}
+
+.darker-input, .darker-input:focus {
+    background-color: black;
+    color: white;
+}
+
+.custom-form-group {
+    margin: 1rem;
+}
+
+.custom-form-controls {
+    margin: 1rem 1rem 0 0;
+}

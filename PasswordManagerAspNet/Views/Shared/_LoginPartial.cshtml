@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using System.Security.Principal
+@using System.Security.Claims
+
+@if (User.Identity.IsAuthenticated)
+{
+    string userClaimEmailProp = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress";
+    var identity = User.Identity as ClaimsIdentity;
+    string email = identity?.FindFirst(userClaimEmailProp)?.Value;
+
+    <li class="nav-item li-custom" id="signout">
+        <span>@email</span>
+        <a class="nav-link a-custom" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut" >Sign out</a>
+    </li>
+}
+else
+{
+    <li class="nav-item li-customs" >
+        <a class="nav-link a-custom" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn" id="signin">Sign in</a>
+    </li>
+}

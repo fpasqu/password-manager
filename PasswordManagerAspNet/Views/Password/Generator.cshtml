@@ -1,0 +1,34 @@
+﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script type="text/javascript" src="~/js/customJs.js"></script>
+@{
+    ViewData["Title"] = "Generator";
+}
+
+<div class="generator">
+    <h1>Generator</h1>
+
+    <div>
+        <span>Include lowercase</span><input type="checkbox" id="lowercase" name="lowercase" value="">
+    </div>
+    <div>
+        <span>Include uppercase</span><input type="checkbox" id="uppercase" name="uppercase" value="">
+    </div>
+    <div>
+        <span>Include numbers</span><input type="checkbox" id="numbers" name="numbers" value="">
+    </div>
+    <div>
+        <span>Include ASCII symbols</span><input type="checkbox" id="ascii" name="ascii" value="">
+    </div>
+    <div>
+        <span>Length: </span><input type="number" class="input-valid" id="length" name="length" value="10" max="9999">
+        <span id="error-label"></span>
+    </div>
+    <div class="has-outcome">
+        <input type="text" id="outcome" name="outcome" value="" readonly>
+    </div>
+
+    <div class="has-button">
+        <button onclick="generatePassword()">Generate</button>
+    </div>
+</div>
+
