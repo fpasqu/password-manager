@@ -90,6 +90,7 @@ namespace PasswordManagerAspNet.Controllers
         }
 
         //generator
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Generator()
         {

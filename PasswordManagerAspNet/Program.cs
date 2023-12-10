@@ -14,7 +14,6 @@ using PasswordManagerAspNet.Models.Repositories;
 
 var ENVS = new EnvConfig 
     {
-        Instance = Environment.GetEnvironmentVariable("PM_INSTANCE_ID"),
         TenantId = Environment.GetEnvironmentVariable("PM_TENANT_ID"),
         ClientId = Environment.GetEnvironmentVariable("PM_CLIENT_ID"),
         ApiAudience = Environment.GetEnvironmentVariable("PM_API_AUDIENCE"),
@@ -34,7 +33,7 @@ builder.Services.AddAuthentication(options =>
 .AddOpenIdConnect("OpenIdConnect", options =>
 {
     options.ClientId = ENVS.ClientId;
-    options.Authority = $"{ENVS.Instance}{ENVS.TenantId}";
+    options.Authority = $"https://login.microsoftonline.com/{ENVS.TenantId}";
     options.CallbackPath = ENVS.CallbackPath;
     options.SignedOutCallbackPath = "/Home";
 });
