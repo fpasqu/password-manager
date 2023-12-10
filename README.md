@@ -75,7 +75,7 @@ After authentication, the user will be able to access the **Your passwords** tab
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/fpasqu/password-manager/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/fpasqu/password-manager/blob/main/LICENSE) for more information.
 
 ## Authors
 
